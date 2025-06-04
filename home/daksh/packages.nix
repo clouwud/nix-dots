@@ -90,6 +90,15 @@
     neovim
     zed-editor
     # emacs
+    # (emacs.pkgs.withPackages (epkgs: with epkgs; [
+    #   use-package
+    #   evil
+    #   gruvbox-theme
+    #   lsp-mode
+    #   tree-sitter
+    #   tree-sitter-langs
+    #   rustic
+    # ]))
 
     # misc
     thunderbird
