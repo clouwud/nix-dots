@@ -96,6 +96,7 @@
     qbittorrent
 
     # editor
+    glow # markdown viewer
     neovim
     zed-editor
     vscode
