@@ -31,6 +31,7 @@
     ../../modules/zoxide/zoxide.nix
     ../../modules/dunst/dunst.nix
     ../../modules/zathura/zathura.nix
+    ../../modules/wine/wine.nix
     # ../../modules/hypridle/hypridle.nix
     # ../../modules/hyprlock/hyprlock.nix
     # ../../modules/thunar/thunar.nix
