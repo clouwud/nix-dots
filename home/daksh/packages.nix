@@ -114,7 +114,8 @@
     wine
     vulkan-tools
     openal
-    monotools
+    dxvk
+    mono
 
     # fonts
     noto-fonts
