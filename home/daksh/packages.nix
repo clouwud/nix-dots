@@ -83,7 +83,7 @@
     pavucontrol
     pulsemixer
     pamixer
-    
+
     # terminal
     kitty
 
@@ -124,8 +124,10 @@
     powerline-fonts
     powerline-symbols
     jetbrains-mono
+    iosevka
     nerd-fonts.fira-code
     nerd-fonts.symbols-only
     nerd-fonts.jetbrains-mono 
+    nerd-fonts.iosevka
   ];
 }
