@@ -36,10 +36,10 @@
       name = "Gruvbox-Plus-Dark";
       package = pkgs.gruvbox-plus-icons;
     };
-    # cursorTheme = {
-    #   name = "McMojave-cursors";
-    #   size = 28;
-    # };
+    cursorTheme = {
+      name = "McMojave-cursors";
+      size = 28;
+    };
 
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;

@@ -16,7 +16,7 @@
     # inputs.nix-colors.homeManagerModules.default
     # inputs.ags.homeManagerModules.default 
     ./files.nix
-    # ./appearance.nix
+    ./appearance.nix
     ./others.nix
     ./packages.nix
     ../../modules/waybar/waybar.nix

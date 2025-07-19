@@ -9,6 +9,8 @@
 
   services.udisks2.enable = true;
 
+  services.blueman.enable = true;
+
   hardware.bluetooth = {
     enable = true; # enables support for Bluetooth
     settings = {
