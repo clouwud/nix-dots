@@ -27,6 +27,7 @@
       msg_urgency = "low";
       background = "#${colorScheme.palette.base00}";
       foreground = "#${colorScheme.palette.base07}";
+      highlight = "#ffffff";
       timeout = 5;
     };
 
@@ -34,6 +35,7 @@
       msg_urgency = "normal";
       background = "#${colorScheme.palette.base00}";
       foreground = "#${colorScheme.palette.base07}";
+      highlight = "#ffffff";
       timeout = 5;
     };
 
