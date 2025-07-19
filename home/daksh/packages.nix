@@ -56,6 +56,8 @@
     playerctl
 
     # tools 
+    cava
+    tty-clock
     yazi
     yt-dlp
     ani-cli
@@ -97,6 +99,7 @@
 
     # editor
     neovim
+    vscode
 
     # misc
     stremio
