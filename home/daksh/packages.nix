@@ -65,7 +65,6 @@
     ffmpeg
     speedtest-rs
     nix-search-cli
-    neofetch
     gh
     imhex
 
