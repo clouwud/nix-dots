@@ -11,10 +11,10 @@
        config.color_scheme = 'Gruvbox dark, hard (base16)'
        config.enable_tab_bar = false
        config.window_padding = {
-         left = 15,
-         right = 15,
-         top = 5,
-         bottom = 5,
+         left = 25,
+         right = 25,
+         top = 25,
+         bottom = 25,
        }
        config.inactive_pane_hsb = {
          saturation = 0.9,
