@@ -52,7 +52,7 @@
       map f toggle_fullscreen
       map [fullscreen] f toggle_fullscreen
 
-      set font "JetBrains Mono 15"
+      set font "Iosevka 15"
     '';
   };
 }
