@@ -92,4 +92,7 @@
     ];
   };
 
+  # Enabled flatpak
+  services.flatpak.enable = true;
+
 }
