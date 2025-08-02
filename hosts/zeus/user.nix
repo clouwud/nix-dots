@@ -73,13 +73,8 @@
     ];
   };
 
-  # environment.variables = {
-  # 	PATH
-  # };
-
   environment.variables.EDITOR = "nvim";
   environment.variables.VISUAL = "nvim";
-  environment.variables.PATH = "~/emacs.d/bin:~/.config/emacs/bin:$PATH";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.daksh = {
