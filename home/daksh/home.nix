@@ -32,6 +32,7 @@ in
     ../../modules/dunst/dunst.nix
     ../../modules/zathura/zathura.nix
     ../../modules/hypridle/hypridle.nix
+    # ../../modules/minecraft/prismlauncher.nix
     # ../../modules/hyprlock/hyprlock.nix
     # ../../modules/thunar/thunar.nix
     # ../../modules/neovim/neovim.nix

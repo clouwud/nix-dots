@@ -54,6 +54,7 @@
     wl-clipboard
     brightnessctl
     playerctl
+    matugen
 
     # tools 
     cava
