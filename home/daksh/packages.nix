@@ -86,6 +86,9 @@
     pulsemixer
     pamixer
 
+    # terminal
+    kitty
+
     # browser
     firefox
     qutebrowser
