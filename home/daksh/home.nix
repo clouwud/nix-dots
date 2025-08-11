@@ -29,7 +29,7 @@ in
     ../../modules/starship/starship.nix
     # ../../modules/wezterm/wezterm.nix
     ../../modules/zoxide/zoxide.nix
-    ../../modules/dunst/dunst.nix
+    # ../../modules/dunst/dunst.nix
     # ../../modules/zathura/zathura.nix
     ../../modules/hypridle/hypridle.nix
     # ../../modules/minecraft/prismlauncher.nix

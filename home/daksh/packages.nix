@@ -51,6 +51,7 @@
     waybar
     hyprshot
     hyprpaper
+    dunst
     wf-recorder
     wl-clipboard
     brightnessctl
