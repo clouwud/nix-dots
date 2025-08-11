@@ -68,6 +68,7 @@
     ffmpeg
     speedtest-rs
     nix-search-cli
+    direnv
     gh
     imhex
 
