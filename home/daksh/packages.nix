@@ -43,11 +43,13 @@
 
     # python
     python313
+    python313Packages.pip
 
     # hyprland
     grim
     swww
     slurp
+    waybar
     hyprshot
     hyprpaper
     wf-recorder
@@ -55,6 +57,7 @@
     brightnessctl
     playerctl
     matugen
+    pywalfox-native
 
     # tools 
     cava

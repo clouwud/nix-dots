@@ -19,7 +19,7 @@ in
     ./appearance.nix
     ./others.nix
     ./packages.nix
-    ../../modules/waybar/waybar.nix
+    # ../../modules/waybar/waybar.nix
     # ../../modules/ags/ags.nix
     ../../modules/emacs/emacs.nix
     ../../modules/bat/bat.nix
