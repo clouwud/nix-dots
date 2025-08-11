@@ -56,6 +56,7 @@
     brightnessctl
     playerctl
     matugen
+    glib
     pywalfox-native
 
     # tools 
