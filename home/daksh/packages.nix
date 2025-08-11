@@ -43,7 +43,6 @@
 
     # python
     python313
-    python313Packages.pip
 
     # hyprland
     grim
