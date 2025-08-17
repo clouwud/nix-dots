@@ -115,6 +115,7 @@
     mpv
 
     # game 
+    steam
     # wine64
     # winetricks
     # vulkan-tools

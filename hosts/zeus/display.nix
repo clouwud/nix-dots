@@ -15,7 +15,23 @@
   # services.xserver.enable = true;
 
   # Enable hyprland
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    # nvidiaPatches = true;
+    xwayland.enable = true;
+  };
+
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOX_OZONE_WL = "1";
+  };
+
+  hardware = {
+    # opengl.enable = true;
+    graphics.enable = true;
+    nvidia.modesetting.enable = true;
+  };
 
   # portals
   xdg.portal = {

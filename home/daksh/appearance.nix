@@ -20,8 +20,8 @@
     };
   };
 
-  # gtk = {
-  #   enable = true;
+  gtk = {
+    enable = true;
   #   # theme = {
   #   #   name = "${colorScheme.slug}";
   #   #   # name = "Gruvbox-Gtk";
@@ -32,21 +32,21 @@
   #   #     in
   #   #     nix-colors-lib.gtkThemeFromScheme { scheme = colorScheme; };
   #   # };
-  #   iconTheme = {
-  #     name = "Gruvbox-Plus-Dark";
-  #     package = pkgs.gruvbox-plus-icons;
-  #   };
-  #   cursorTheme = {
-  #     name = "McMojave-cursors";
-  #     size = 28;
-  #   };
-  #
-  #   gtk3.extraConfig = {
-  #     gtk-application-prefer-dark-theme = 1;
-  #   };
-  #
-  #   gtk4.extraConfig = {
-  #     gtk-application-prefer-dark-theme = 1;
-  #   };
-  # };
+    iconTheme = {
+      name = "Gruvbox-Plus-Dark";
+      package = pkgs.gruvbox-plus-icons;
+    };
+    cursorTheme = {
+      name = "McMojave-cursors";
+      size = 28;
+    };
+
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
 }
