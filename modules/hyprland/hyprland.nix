@@ -167,7 +167,7 @@
       "$mainMod, RETURN, exec, uwsm app -- $terminal"
       "$mainMod, E, exec, uwsm app -- $fileManager"
       "$mainMod, B, exec, uwsm app -- $browser"
-      "$mainMod, SPACE, exec, uwsm app -- $menu"
+      "$mainMod, R, exec, uwsm app -- $menu"
       "$mainMod, G, exec, uwsm app -- $volume_control"
 
       "$mainMod, Q, killactive,"
@@ -224,7 +224,7 @@
       "$mainMod SHIFT, S, exec, uwsm app -- hyprshot -m region"
 
       # Screenshot a region and draw using flameshot
-      "$mainMod SHIFT, PRINT, exec, uwsm app -- flameshot gui -r --path ~/Pictures/Screenshots | wl-copy"
+      "$mainMod SHIFT, PRINT, exec, uwsm app -- flameshot gui -r --path ~/Pictures/screenshots | wl-copy"
 
       # clipboard
       "$mainMod, V, exec, uwsm app -- cliphist list | wofi --dmenu | cliphist decode | wl-copy"

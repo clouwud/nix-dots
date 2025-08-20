@@ -46,11 +46,9 @@
 
     # hyprland
     grim
-    swww
     slurp
     waybar
     hyprshot
-    hyprpaper
     dunst
     wf-recorder
     wl-clipboard
@@ -70,9 +68,16 @@
     ffmpeg
     speedtest-rs
     nix-search-cli
+    trash-cli
     direnv
     gh
     imhex
+
+    # kde qt stuff
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    kdePackages.xwaylandvideobridge
 
     # gtk
     gtk3
