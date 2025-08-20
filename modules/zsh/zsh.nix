@@ -7,12 +7,23 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      r = "yazi";
+      ac = "ani-cli";
+      sd = "shutdown now";
+      re = "reboot";
+      # eza = "eza --icons";
+      ls = "eza";
+      l = "ls -l";
       ll = "ls -l";
-      l = "eza -l -a --icons --no-user --git";
+      la = "ls -a";
+      lla = "ls -la --header";
+      lt = "ls --tree";
+      ".." = "cd ..";
+      battery="bat /sys/class/power_supply/BAT1/capacity";
       nv = "nvim";
       q = "exit";
       rm = "trash -v";
-      c = "code .";
+      c = "clear";
       copy = "wl-copy";
       find = "fd";
       nd = "nix develop -c zsh";
@@ -33,10 +44,10 @@
         "extract"
         "zoxide"
         "starship"
-        "ssh"
+        # "ssh"
         "colored-man-pages"
-        "ssh-agent"
-        "gpg-agent"
+        # "ssh-agent"
+        # "gpg-agent"
       ];
     };
     initContent = (builtins.readFile ./.zshrc);
