@@ -37,6 +37,7 @@ in
     ../../modules/hyprpaper/hyprpaper.nix
     ../../modules/zsh/zsh.nix
     ../../modules/wofi/wofi.nix
+    ../../modules/yazi/yazi.nix
     # ../../modules/minecraft/prismlauncher.nix
     # ../../modules/hyprlock/hyprlock.nix
     # ../../modules/thunar/thunar.nix
