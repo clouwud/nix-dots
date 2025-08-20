@@ -39,6 +39,9 @@
   };
 
   programs.wofi.style = ''
+    * {
+      font-family: JetBrains Mono;
+    }
       window {
       margin: 0px;
       border: 2px none #${colorScheme.palette.base01};
@@ -55,7 +58,7 @@
       box-shadow: none;
       border-width: 1px;
       color: #${colorScheme.palette.base07};
-      font-family: FiraCode Nerd Font;
+      font-family: JetBrains Mono;
       font-size: 16px;
       font-weight: 800;
       background-color: #${colorScheme.palette.base00};
