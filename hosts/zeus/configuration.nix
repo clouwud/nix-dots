@@ -19,6 +19,7 @@ in
       ./display.nix
       ./network.nix
       ./packages.nix
+      ./extra.nix
       # ./virtual.nix
       inputs.home-manager.nixosModules.home-manager
     ];
