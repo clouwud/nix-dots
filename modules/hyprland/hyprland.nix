@@ -157,7 +157,8 @@
     # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
     device = {
       name = "razer-razer-deathadder-essential";
-      sensitivity = -0.82;
+      # sensitivity = -0.82;
+      sensitivity = -0.5;
     };
 
     "$mainMod" = "SUPER";
@@ -171,7 +172,7 @@
       "$mainMod, G, exec, uwsm app -- $volume_control"
 
       "$mainMod, Q, killactive,"
-      "$mainMod, T, togglefloating,"
+      "$mainMod SHIFT, SPACE, togglefloating,"
       "$mainMod, F, fullscreen,"
 
       # Move focus with mainMod + arrow keys
