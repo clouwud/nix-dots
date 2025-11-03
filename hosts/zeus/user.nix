@@ -24,72 +24,19 @@
     LC_TIME = "en_IN";
   };
 
-  # Install zsh
-  # programs.zsh = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   autosuggestions.enable = true;
-  #   syntaxHighlighting.enable = true;
-  #   interactiveShellInit = ''
-  #     source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-  #   '';
-  #
-  #   ohMyZsh = {
-  #     enable = true;
-  #     plugins = [
-  #       "git"
-  #       "zoxide"
-  #       "colored-man-pages"
-  #     ];
-  #     # theme = "robbyrussell";
-  #   };
-  #
-  #   shellAliases = {
-  #     edit = "sudo -e";
-  #     update = "sudo nixos-rebuild switch --flake /home/daksh/nixos/hosts#zeus";
-  #     r = "yazi";
-  #     q = "exit";
-  #     c = "clear";
-  #     nv = "nvim";
-  #     st = "df -h";
-  #     ac = "ani-cli";
-  #     sd = "shutdown now";
-  #     re = "reboot";
-  #     eza = "eza --icons";
-  #     ls = "eza";
-  #     l = "ls -l";
-  #     ll = "ls -l";
-  #     la = "ls -a";
-  #     lla = "ls -la --header";
-  #     lt = "ls --tree";
-  #     ".." = "cd ..";
-  #     battery="bat /sys/class/power_supply/BAT1/capacity";
-  #   };
-  #
-  #   histSize = 10000000;
-  #   histFile = "$HOME/.zsh_history";
-  #   setOptions = [
-  #     "HIST_IGNORE_ALL_DUPS"
-  #   ];
-  # };
-
-  # environment.variables.EDITOR = "nvim";
-  # environment.variables.VISUAL = "nvim";
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # # Define a user account. Don't forget to set a password with ‘passwd’.
   # users.users.daksh = {
   #   isNormalUser = true;
   #   description = "daksh";
   #   extraGroups = [ "networkmanager" "wheel" ];
-  #   shell = pkgs.zsh;
   #   packages = with pkgs; [
   #   #  thunderbird
   #   ];
   # };
 
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
     users.daksh = {
       isNormalUser = true;
       description = "daksh";
@@ -100,8 +47,4 @@
       ];
     };
   };
-
-  # Enabled flatpak
-  services.flatpak.enable = true;
-
 }

@@ -4,46 +4,26 @@
   inputs,
   ...
 }:
-let
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-material-dark-hard;
-in 
+
 {
+  # Home Manager needs a bit of information about you and the paths it should
+  # manage.
   home.username = "daksh";
   home.homeDirectory = "/home/daksh";
-  
-  imports = [
-    # inputs.nixvim.homeManagerModules.nixvim
-    inputs.nix-colors.homeManagerModules.default
-    # inputs.ags.homeManagerModules.default 
-    ../common.nix
-    ./files.nix
-    ./appearance.nix
-    ./packages.nix
-    ./others.nix
-    ../../modules/waybar/waybar.nix
-    ../../modules/emacs/emacs.nix
-    ../../modules/bat/bat.nix
-    ../../modules/btm/btm.nix
-    ../../modules/cliphist/cliphist.nix
-    ../../modules/eza/eza.nix
-    ../../modules/starship/starship.nix
-    ../../modules/wezterm/wezterm.nix
-    ../../modules/zoxide/zoxide.nix
-    ../../modules/dunst/dunst.nix
-    ../../modules/zathura/zathura.nix
-    ../../modules/hypridle/hypridle.nix
-    ../../modules/hyprland/hyprland.nix
-    ../../modules/hypridle/hypridle.nix
-    ../../modules/hyprpaper/hyprpaper.nix
-    ../../modules/zsh/zsh.nix
-    ../../modules/wofi/wofi.nix
-    ../../modules/yazi/yazi.nix
-    # ../../modules/minecraft/prismlauncher.nix
-    # ../../modules/hyprlock/hyprlock.nix
-    # ../../modules/thunar/thunar.nix
-    # ../../modules/neovim/neovim.nix
-  ];
 
+  imports = [
+    ../common.nix
+    ./appearance.nix
+    ./files.nix
+    ./others.nix
+    ./packages.nix
+    ./packages.nix
+    ../../modules/nvim/nixvim.nix
+    ../../modules/fish/fish.nix
+    ../../modules/foot/foot.nix
+    ../../modules/zoxide/zoxide.nix
+    inputs.nixvim.homeModules.nixvim
+  ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -54,8 +34,8 @@ in
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
+  # The home.packages option allows you to install Nix packages into your
+  # environment.
 
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
@@ -74,19 +54,8 @@ in
   #  /etc/profiles/per-user/daksh/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "nvim";
-    QT_QPA_PLATFORM = "wayland";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    QT_STYLE_OVERRIDE = "kvantum";
-    TERMINAL = "wezterm";
-    TERM = "wezterm";
-    GOPATH = "~/.go";
-    PATH = "~/emacs.d/bin:~/.config/emacs/bin:$PATH";
+    # EDITOR = "emacs";
   };
-
-  home.sessionPath = [
-    "~/emacs.d/bin:~/.config/emacs/bin:$PATH"
-  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

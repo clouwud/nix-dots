@@ -7,27 +7,25 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nixvim = {
-    #   url = "github:nix-community/nixvim/nixos-25.05";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    nix-colors.url = "github:misterio77/nix-colors";
-    # ags.url = "github:Aylur/ags";
+    nixvim = {
+      # url = "github:nix-community/nixvim";
+      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
+      url = "github:nix-community/nixvim/nixos-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     self,
     nixpkgs,
     home-manager,
-    nix-colors,
-    # ags,
     ...
   }
     @inputs: 
   {
     nixosConfigurations.zeus= nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit inputs nix-colors;
+	inherit inputs;
       };
       modules = [
         ./hosts/zeus/configuration.nix

@@ -1,41 +1,33 @@
-{
-  config,
-  pkgs,
-  inputs,
-  nix-colors,
-  ...
+{ 
+    config,
+    pkgs,
+    inputs,
+    ...
 }:
-let
-  # colorScheme = inputs.nix-colors.colorSchemes.gruvbox-material-dark-hard;
-  colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-hard;
-in
+
 {
   imports =
     [
       ./hardware.nix
       ./boot.nix
-      ./user.nix
-      ./sound.nix
       ./display.nix
       ./network.nix
       ./packages.nix
-      ./extra.nix
-      # ./virtual.nix
-      inputs.home-manager.nixosModules.home-manager
+      ./sound.nix
+      ./user.nix
+      # inputs.home-manager.nixosModules.home-manager
     ];
 
-  # nixos flakes
+  # enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # enable home manager
   home-manager = {
-    extraSpecialArgs = {inherit inputs colorScheme; };
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "daksh" = import ../../home/daksh/home.nix;
     };
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
