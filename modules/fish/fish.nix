@@ -11,6 +11,7 @@
       c = "clear";
       r = "yazi";
       q = "exit";
+      nv = "nvim";
     };
   };
 }
