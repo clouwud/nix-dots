@@ -18,6 +18,7 @@
     ./others.nix
     ./packages.nix
     ./packages.nix
+    ../../modules/alacritty/alacritty.nix
     ../../modules/nvim/nixvim.nix
     ../../modules/fish/fish.nix
     ../../modules/foot/foot.nix
