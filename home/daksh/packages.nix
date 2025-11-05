@@ -18,6 +18,13 @@
 
     gcc
 
+    # mangowc
+    wmenu
+    wl-clipboard
+    grim
+    slurp
+    swaybg
+
     # gaming
     wineWowPackages.waylandFull
     winetricks
@@ -28,5 +35,6 @@
     noto-fonts-emoji
     font-awesome
     nerd-fonts.iosevka
+    nerd-fonts.jetbrains-mono
   ];
 }

@@ -1,8 +1,8 @@
 {
-    pkgs,
-    lib,
-    config,
-    ...
+  pkgs,
+  lib,
+  config,
+  ...
 }:
 {
 
@@ -16,13 +16,8 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable dwm
-  services.xserver.windowManager.dwm = {
-    enable = true;
-    package = pkgs.dwm.overrideAttrs {
-      src = ../../modules/suckless/dwm;
-    };
-  };
+  # Enable mangowc
+  programs.mangowc.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {

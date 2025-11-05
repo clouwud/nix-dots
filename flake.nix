@@ -7,30 +7,34 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixvim = {
-      # url = "github:nix-community/nixvim";
-      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
       url = "github:nix-community/nixvim/nixos-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { 
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  }
-    @inputs: 
-  {
-    nixosConfigurations.zeus= nixpkgs.lib.nixosSystem {
-      specialArgs = {
-	inherit inputs;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      mangowc,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.zeus = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./hosts/zeus/configuration.nix
+          inputs.home-manager.nixosModules.home-manager
+          inputs.mangowc.nixosModules.default
+        ];
       };
-      modules = [
-        ./hosts/zeus/configuration.nix
-        inputs.home-manager.nixosModules.home-manager
-      ];
     };
-  };
 }

@@ -11,17 +11,17 @@
     };
 
     font.bold_italic = {
-      family = "Iosecka Nerd Font";
+      family = "Iosevka Nerd Font";
       style = "Bold Italic";
     };
 
     font.italic = {
-      family = "Iosecka Nerd Font";
+      family = "Iosevka Nerd Font";
       style = "Italic";
     };
 
     font.normal = {
-      family = "Iosecka Nerd Font";
+      family = "Iosevka Nerd Font";
       style = "Regular";
     };
 
