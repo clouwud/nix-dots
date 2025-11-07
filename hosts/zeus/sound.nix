@@ -5,7 +5,10 @@
 }:
 {
   # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
+  services.pulseaudio = {
+    enable = false;
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -15,14 +18,10 @@
     # If you want to use JACK applications, uncomment this
     jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-
     # extraConfig.pipewire-pulse = ''
-    #           pulse.rules = [
+    #           "pulse.rules" = [
     #       {
-    #           matches = [
+    #           "matches" = [
     #               {
     #                   # all keys must match the value. ! negates. ~ starts regex.
     #                   #client.name                = "Firefox"
@@ -44,7 +43,7 @@
     #       }
     #       {
     #           # skype does not want to use devices that don't have an S16 sample format.
-    #           matches = [
+    #           "matches" = [
     #                { application.process.binary = "teams" }
     #                { application.process.binary = "teams-insiders" }
     #                { application.process.binary = "skypeforlinux" }
@@ -59,7 +58,7 @@
     #       }
     #       {
     #           # speech dispatcher asks for too small latency and then underruns.
-    #           matches = [ { application.name = "~speech-dispatcher.*" } ]
+    #           "matches" = [ { application.name = "~speech-dispatcher.*" } ]
     #           actions = {
     #               update-props = {
     #                   pulse.min.req          = 512/48000      # 10.6ms
@@ -70,19 +69,94 @@
     #       }
     #      {
     #           # prevent all sources matching "Chromium" from messing with the volume
-    #           matches = [ { application.name = "~Chromium.*" } ]
+    #           "matches" = [ { application.name = "~Chromium.*" } ]
     #           actions = { quirks = [ block-source-volume ] }
     #
     #       }
     #       {
-    #           matches = [ { application.process.binary = "Discord" } ]
+    #           "matches" = [ { application.process.binary = "Discord" } ]
     #           actions = { quirks = [ block-source-volume ] }
     #       }
     #       {
-    #           matches = [ { application.process.binary = "Chromium input" } ]
+    #           "matches" = [ { application.process.binary = "Chromium input" } ]
     #           actions = { quirks = [ block-source-volume ] }
     #       }
     #   ]
     # '';
+
+    extraConfig.pipewire-pulse = {
+      "10-adjustQuirkRules" = {
+        "pulse.rules" = [
+          {
+            "matches" = [
+              { "application.process.binary" = "teams"; }
+              { "application.process.binary" = "teams-insiders"; }
+              { "application.process.binary" = "skypeforlinux"; }
+            ];
+            actions = {
+              quirks = [
+                "force-s16-info"
+              ];
+            };
+          }
+          {
+            "matches" = [
+              { "application.process.binary" = "firefox"; }
+            ];
+            actions = {
+              quirks = [
+                "remove-capture-dont-move"
+              ];
+            };
+          }
+          {
+            "matches" = [
+              { "application.process.binary" = "~speech-dispatcher.*"; }
+            ];
+            actions = {
+              update-props = {
+                "pulse.min.req" = "512/48000"; # 10.6ms
+                "pulse.min.quantum" = "512/48000"; # 10.6ms
+                "pulse.idle.timeout" = "5"; # pause after 5 seconds of underrun
+              };
+            };
+          }
+          {
+            "matches" = [
+              { "application.name" = "~Chromium.*"; }
+            ];
+            actions = {
+              quirks = [
+                "block-source-volume"
+              ];
+            };
+          }
+          {
+            "matches" = [
+              { "application.name" = "Discord"; }
+            ];
+            actions = {
+              quirks = [
+                "block-source-volume"
+              ];
+            };
+          }
+          {
+            "matches" = [
+              { "application.name" = "Chromium input"; }
+            ];
+            actions = {
+              quirks = [
+                "block-source-volume"
+              ];
+            };
+          }
+        ];
+      };
+    };
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
   };
 }
