@@ -13,6 +13,7 @@
     nix-search-cli
     spotify
     equibop
+    vesktop
     qbittorrent
     stremio
 
