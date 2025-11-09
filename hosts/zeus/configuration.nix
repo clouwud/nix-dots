@@ -13,6 +13,7 @@
       ./display.nix
       ./network.nix
       ./packages.nix
+      ./security.nix
       ./sound.nix
       ./user.nix
       # inputs.home-manager.nixosModules.home-manager
