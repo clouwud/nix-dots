@@ -11,6 +11,7 @@
       ./hardware.nix
       ./boot.nix
       ./display.nix
+      ./graphics.nix
       ./network.nix
       ./packages.nix
       ./security.nix
