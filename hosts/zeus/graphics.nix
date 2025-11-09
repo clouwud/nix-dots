@@ -26,6 +26,7 @@ in
     };
     nvidia = {
       package = config.boot.kernelPackages.nvidia_x11;
+      open = true;
       prime = {
         #      sync.enable = true;
         offload = {
