@@ -16,11 +16,12 @@
         ];
         modules-right = [
           "group/tray-expander"
-          "privacy"
+          # "privacy"
           "pulseaudio"
           "network"
           "bluetooth"
           "clock"
+          "battery"
         ];
 
         "hyprland/workspaces" = {
