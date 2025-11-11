@@ -24,6 +24,8 @@
     stremio
     swayimg
     swww
+    brightnessctl
+    playerctl
 
     # man pages
     # linux-manual
