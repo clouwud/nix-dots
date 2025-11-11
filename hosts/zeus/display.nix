@@ -15,13 +15,17 @@
   # Optional, hint Electron apps to use Wayland:
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  # Enable Hyprland
+  programs.hyprland.enable = true;
+  programs.hyprland.withUWSM = true;
+
   xdg.portal = {
     enable = true;
     extraPortals = [
       pkgs.xdg-desktop-portal
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
-      # pkgs.xdg-desktop-portal-hyprland
+      # pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-hyprland
     ];
     config.common.default = "*";
   };
