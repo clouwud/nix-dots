@@ -16,7 +16,7 @@
       padding = 15;
       horizontal_padding = 15;
       dmenu = "wofi -d -p dunst";
-      corner_radius = 10;
+      corner_radius = 0;
       format = "<b>%s</b>\\n%b";
       sticky_history = "no";
       monitor = 1;
