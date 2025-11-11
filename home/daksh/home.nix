@@ -24,6 +24,7 @@
     ../../modules/emacs/emacs.nix
     ../../modules/fish/fish.nix
     ../../modules/foot/foot.nix
+    ../../modules/kitty/kitty.nix
     ../../modules/direnv/direnv.nix
     ../../modules/wezterm/wezterm.nix
     ../../modules/zoxide/zoxide.nix
