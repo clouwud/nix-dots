@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  colorScheme,
   ...
 }:
 
@@ -27,6 +28,7 @@
     ../../modules/wezterm/wezterm.nix
     ../../modules/zoxide/zoxide.nix
     inputs.nixvim.homeModules.nixvim
+    inputs.nix-colors.homeManagerModules.default
   ];
 
   # This value determines the Home Manager release that your configuration is

@@ -2,7 +2,6 @@
 {
   programs.wezterm = {
     enable = true;
-    enableFishIntegration = true;
     extraConfig = ''
        local config = wezterm.config_builder()
        config.font = wezterm.font 'Iosevka Nerd Font'
