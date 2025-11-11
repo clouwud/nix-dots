@@ -11,7 +11,7 @@
 
     "$terminal" = "wezterm";
     "$fileManager" = "wezterm start -- yazi";
-    "$menu" = "wofi --show drun";
+    "$menu" = "wmenu-run -N 282828 -n ebdbb2 -S ebdbb2 -s 282828 -f 'Iosevka Nerd Font 12' ";
     "$browser" = "firefox";
     "$volume_control" = "pavucontrol";
     "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
@@ -31,30 +31,31 @@
       inactive_opacity = 0.95;
     };
     animations = {
-      enabled = "yes";
+      enabled = "no";
+
+      bezier = [
+        "specialWorkSwitch, 0.05, 0.7, 0.1, 1"
+        "emphasizedAccel, 0.3, 0, 0.8, 0.15"
+        "emphasizedDecel, 0.05, 0.7, 0.1, 1"
+        "standard, 0.2, 0, 0, 1"
+      ];
+      animation = [
+        "layersIn, 1, 5, emphasizedDecel, slide"
+        "layersOut, 1, 4, emphasizedAccel, slide"
+        "fadeLayers, 1, 5, standard"
+
+        "windowsIn, 1, 5, emphasizedDecel"
+        "windowsOut, 1, 3, emphasizedAccel"
+        "windowsMove, 1, 6, standard"
+        "workspaces, 1, 5, standard"
+
+        "specialWorkspace, 1, 4, specialWorkSwitch, slidefadevert 15%"
+
+        "fade, 1, 6, standard"
+        "fadeDim, 1, 6, standard"
+        "border, 1, 6, standard"
+      ];
     };
-    bezier = [
-      "specialWorkSwitch, 0.05, 0.7, 0.1, 1"
-      "emphasizedAccel, 0.3, 0, 0.8, 0.15"
-      "emphasizedDecel, 0.05, 0.7, 0.1, 1"
-      "standard, 0.2, 0, 0, 1"
-    ];
-    animation = [
-      "layersIn, 1, 5, emphasizedDecel, slide"
-      "layersOut, 1, 4, emphasizedAccel, slide"
-      "fadeLayers, 1, 5, standard"
-
-      "windowsIn, 1, 5, emphasizedDecel"
-      "windowsOut, 1, 3, emphasizedAccel"
-      "windowsMove, 1, 6, standard"
-      "workspaces, 1, 5, standard"
-
-      "specialWorkspace, 1, 4, specialWorkSwitch, slidefadevert 15%"
-
-      "fade, 1, 6, standard"
-      "fadeDim, 1, 6, standard"
-      "border, 1, 6, standard"
-    ];
     binds = {
       scroll_event_delay = 0;
     };
