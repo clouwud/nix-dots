@@ -22,7 +22,7 @@
       export XDG_CURRENT_DESKTOP=Hyprland
       export XDG_SESSION_DESKTOP=Hyprland
       export XCURSOR_THEME=Bibata-Modern-Classic
-      export XCURSOR_SIZE=22
+      export XCURSOR_SIZE=20
       export LIBVA_DRIVER_NAME=nvidia
       export __GLX_VENDOR_LIBRARY_NAME=nvidia
       export HYPRSHOT_DIR=/home/daksh/Pictures/screenshots
@@ -30,7 +30,7 @@
 
     ".config/uwsm/env-hyprland".text = ''
       export HYPRCURSOR_THEME=Bibata-Modern-Classic
-      export HYPRCURSOR_SIZE=22
+      export HYPRCURSOR_SIZE=20
       export AQ_DRM_DEVICES="/dev/dri/card1:/dev/dri/card0"
     '';
   };

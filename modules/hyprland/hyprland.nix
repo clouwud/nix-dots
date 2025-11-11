@@ -102,12 +102,12 @@
     gestures = {
       workspace_swipe = true;
     };
-    device = [
-      {
-        name = "razer-razer-deathadder-essential";
-        sensitivity = -0.82;
-      }
-    ];
+    # device = [
+    #   {
+    #     name = "razer-razer-deathadder-essential";
+    #     sensitivity = -0.82;
+    #   }
+    # ];
 
     "$mainMod" = "SUPER";
 
