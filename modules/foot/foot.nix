@@ -4,8 +4,9 @@
     enable = true;
     settings = {
       main = {
-        font = "Iosevka Nerd Font:style=Regular:pixelsize=22";
-        font-bold = "Iosevka Nerd Font:style=Bold:pixelsize=22";
+        font = "Iosevka Nerd Font:style=Regular:pixelsize=14";
+        font-bold = "Iosevka Nerd Font:style=Bold:pixelsize=14";
+        pad = "20x20 center";
       };
       scrollback.lines = 10000;
       colors = {
