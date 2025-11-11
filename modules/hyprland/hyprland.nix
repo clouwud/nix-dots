@@ -16,14 +16,16 @@
     "$menu" = "wmenu-run -N 282828 -n ebdbb2 -S ebdbb2 -s 282828 -f 'Iosevka Nerd Font 12' ";
     "$browser" = "firefox";
     "$volume_control" = "pavucontrol";
-    "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+    # "$clipboard" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy";
+    "$clipboard" =
+      "cliphist list | wmenu -N 282828 -n ebdbb2 -S ebdbb2 -s 282828 -f 'Iosevka Nerd Font 12'  | cliphist decode | wl-copy";
 
     general = {
-      layout = "master";
+      layout = "dwindle";
       allow_tearing = false;
-      gaps_workspaces = 10;
-      gaps_in = 5;
-      gaps_out = 5;
+      gaps_workspaces = 15;
+      gaps_in = 10;
+      gaps_out = 10;
       border_size = 2;
       "col.active_border" = "rgb(${colorScheme.palette.base04})";
     };
