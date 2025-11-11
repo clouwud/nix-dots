@@ -69,7 +69,7 @@
 
     # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
     master = {
-      new_status = "master";
+      new_status = "slave";
     };
 
     # https://wiki.hyprland.org/Configuring/Variables/#misc
@@ -118,6 +118,8 @@
       "$mainMod, Q, killactive,"
       "$mainMod SHIFT, SPACE, togglefloating,"
       "$mainMod, F, fullscreen,"
+      "$mainMod, I, togglesplit,"
+      "$mainMod, P, pseudo,"
 
       # Move focus with mainMod + arrow keys
       "$mainMod, left,  movefocus, l"
