@@ -13,6 +13,7 @@
     yt-dlp
     ffmpeg
     dust
+    htop-vim
     brave
     yazi
     nix-search-cli
