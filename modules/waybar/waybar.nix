@@ -21,6 +21,7 @@
           "network"
           "bluetooth"
           "clock"
+          "custom/sunset"
           "battery"
         ];
 
@@ -117,6 +118,12 @@
         };
         "custom/expand-icon" = {
           "format" = "> ";
+          "tooltip" = false;
+        };
+        "custom/sunset" = {
+          "format" = "󰽢 ";
+          "format-alt" = "󰽤 ";
+          "on-click" = "pkill wlsunset || wlsunset";
           "tooltip" = false;
         };
         "pulseaudio" = {
