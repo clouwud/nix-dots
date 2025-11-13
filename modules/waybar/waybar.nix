@@ -25,7 +25,7 @@
         ];
 
         "hyprland/workspaces" = {
-          "active-only" = false;
+          "active-only" = true;
           "disable-scroll" = true;
           "all-outputs" = true;
           "warp-on-scroll" = false;
