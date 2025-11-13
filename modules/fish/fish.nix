@@ -44,7 +44,7 @@
 
       # nix
       nd = "nix develop path:. -c zsh";
-      nr = "sudo nixos-rebuild switch --flake ~/nixos/hosts#zeus";
+      nr = "sudo nixos-rebuild switch --flake ~/nix-dots/hosts#zeus";
       ncd = "sudo nix-collect-garbage -d";
       ns = "nix-search";
     };
