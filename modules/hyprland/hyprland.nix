@@ -246,7 +246,7 @@
       "float, class:blueman-manager"
       "float, class:com\.github\.GradienceTeam\.Gradience"
       "float, class:feh"
-      "float, class:imv"
+      "float, class:swayimg"
       "float, class:system-config-printer"
       "float, class:org\.quickshell"
 

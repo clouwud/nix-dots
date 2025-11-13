@@ -20,6 +20,7 @@
       format = "<b>%s</b>\\n%b";
       sticky_history = "no";
       monitor = 1;
+      show_indicators = "no";
     };
 
     base16_low = {
