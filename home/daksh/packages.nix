@@ -112,6 +112,7 @@
     # gaming
     wineWowPackages.waylandFull
     winetricks
+    steam
 
     # fonts
     noto-fonts
