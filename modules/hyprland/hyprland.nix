@@ -190,15 +190,9 @@
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
 
-      # Screenshot a monitor
-      "$mainMod, PRINT, exec, uwsm app -- hyprshot -m window"
+      # Screenshots
+      "$mainMod, PRINT, exec, uwsm app -- hyprshot -m region"
       ", PRINT, exec, uwsm app -- hyprshot -m output"
-
-      # Screenshot a region
-      "$mainMod SHIFT, S, exec, uwsm app -- hyprshot -m region"
-
-      # Screenshot a region and draw using flameshot
-      "$mainMod SHIFT, PRINT, exec, uwsm app -- flameshot gui -r --path ~/Pictures/screenshots | wl-copy"
 
       #zoom
       "$mainMod SHIFT, mouse_down, exec, hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | awk '/^float.*/ {print $2 * 1.1}')"
