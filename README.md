@@ -2,6 +2,8 @@
 
 NixOS configuration files using Flakes and Home Manager.
 
+![NIXOSBTW](./ss-nixos.png)
+
 For my own reference:
 ```sh
 # new nix shell environment with git and vim
