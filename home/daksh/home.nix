@@ -24,6 +24,7 @@
     ../../modules/bottom/bottom.nix
     ../../modules/eza/eza.nix
     ../../modules/mpv/mpv.nix
+    ../../modules/git/git.nix
     ../../modules/tmux/tmux.nix
     ../../modules/cliphist/cliphist.nix
     ../../modules/dunst/dunst.nix
