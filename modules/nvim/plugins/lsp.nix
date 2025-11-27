@@ -31,7 +31,7 @@
           # nixd.enable = true;
           nil_ls = {
             enable = true;
-            settings.formatting.command = [ "nixfmt" ];
+            settings.formatting.command = [ "nixfmt-classic" ];
           };
           rust_analyzer = {
             enable = true;
