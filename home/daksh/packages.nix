@@ -18,6 +18,7 @@
     yazi
     nix-search-cli
     spotify
+    youtube-music
     # psst # spotify in rust (early development)
     equibop
     vesktop
