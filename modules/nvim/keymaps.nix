@@ -39,7 +39,6 @@
         ];
         key = "S";
         action.__raw = "function() require(\"flash\").treesitter() end";
-        lua = true;
         options = {
           silent = true;
           desc = "Flash Treesitter";
