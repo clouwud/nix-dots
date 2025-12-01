@@ -23,8 +23,7 @@
           "o"
         ];
         key = "s";
-        action = "function() require(\"flash\").jump() end";
-        lua = true;
+        action.__raw = "function() require(\"flash\").jump() end";
         options = {
           silent = true;
           desc = "Flash";
@@ -39,7 +38,7 @@
           "o"
         ];
         key = "S";
-        action = "function() require(\"flash\").treesitter() end";
+        action.__raw = "function() require(\"flash\").treesitter() end";
         lua = true;
         options = {
           silent = true;
@@ -115,8 +114,7 @@
           "o"
         ];
         key = "<leader>ca";
-        action = "function() vim.lsp.buf.code_action() end";
-        lua = true;
+        action.__raw = "function() vim.lsp.buf.code_action() end";
         options = {
           silent = true;
           desc = "Accept code action";
@@ -234,8 +232,7 @@
           "n"
         ];
         key = "<leader>/";
-        action = "function() require(\"Comment.api\").toggle.linewise.current() end";
-        lua = true;
+        action.__raw = "function() require(\"Comment.api\").toggle.linewise.current() end";
         options = {
           silent = true;
           desc = "comment line";
@@ -247,8 +244,7 @@
           "v"
         ];
         key = "<leader>/";
-        action = "function() require(\"Comment.api\").toggle.linewise(vim.fn.visualmode()) end";
-        lua = true;
+        action.__raw = "function() require(\"Comment.api\").toggle.linewise(vim.fn.visualmode()) end";
         options = {
           silent = true;
           desc = "comment lines in visual";
@@ -261,8 +257,7 @@
           "n"
         ];
         key = "<leader>fm";
-        action = "function() vim.lsp.buf.format { async = true } end";
-        lua = true;
+        action.__raw = "function() vim.lsp.buf.format { async = true } end";
         options = {
           silent = true;
           desc = "format";
