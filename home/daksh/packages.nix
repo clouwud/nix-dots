@@ -29,6 +29,7 @@
     brightnessctl
     playerctl
     pavucontrol
+    udiskie
 
     github-cli
 
