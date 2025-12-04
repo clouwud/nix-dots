@@ -30,6 +30,7 @@
     playerctl
     pavucontrol
     udiskie
+    jq
 
     github-cli
 
@@ -39,6 +40,8 @@
     # man-pages-posix
 
     xfce.thunar
+
+    quickshell
 
     # ebook reader
     foliate
